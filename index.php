@@ -3,12 +3,12 @@
 
 <?php 
 //Total In Stocks 
-$account = $_SESSION['stockist_username'];
-$qry = "SELECT * FROM stockist WHERE stockist_username = '$account'";
+$account = $_SESSION['username'];
+$qry = "SELECT * FROM stockist WHERE username = '$account'";
 $result = mysqli_query($link, $qry) or die(mysqli_error($link));
 if (mysqli_num_rows($result) > 0) {
   while($rows = mysqli_fetch_array($result)){
-   $username = $rows['stockist_username'];
+   $username = $rows['username'];
    $warehouse = $rows['area_center'];
  }
 

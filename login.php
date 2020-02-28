@@ -26,16 +26,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }
 
   //Query
-  $querySelect ="SELECT * FROM stockist WHERE stockist_username='$username' ";
+  $querySelect ="SELECT * FROM stockist WHERE username='$username' ";
   $queryResult = mysqli_query($link, $querySelect) or die(mysqli_error($link));
 
   if($queryResult){
 
     if(mysqli_num_rows($queryResult) > 0){
                 while($row = mysqli_fetch_assoc($queryResult)){
-                  $username = $row['stockist_username'];
-                  $hash     = $row['stockist_password'];
-                  $usertype = $row['stockist_usertype'];
+                  $username = $row['username'];
+                  $hash     = $row['password'];
+                  $usertype = $row['usertype'];
                 }
 
                 if(password_verify($password, $hash)){
@@ -75,12 +75,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                           session_start();
                           // Store data in session variables
                           $_SESSION["loggedin"] = true;
-                          $_SESSION["stockist_username"] = $username;
-                          $_SESSION["stockist_usertype"] = "Stockist";
+                          $_SESSION["username"] = $username;
+                          $_SESSION["usertype"] = "Stockist";
 
 
                           //logs
-                          $info = $_SESSION['stockist_username']." Logged In";
+                          $info = $_SESSION['username']." Logged In";
                           $info2 = "Details: ".$username.", ".$usertype." IP:".getRealIpAddr();
 
                           $query="

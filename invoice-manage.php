@@ -3,11 +3,14 @@
 <?php
   $Admin_auth = 1;
   $Stock_auth = 1;
+  $Stockist_auth = 1;
   $Area_Center_auth = 0;
  include('includes/user_auth.php');
 
 
   require_once 'config.php';
+
+  $warehouse_ac="";
 
  $account = $_SESSION['username'];
   $qry = "SELECT username, warehouse FROM area_center WHERE username = '$account'";

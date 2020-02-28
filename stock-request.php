@@ -2,17 +2,17 @@
 
 
 <?php
-$alertMessage = "";
+$alertMessage = $warehouse_ac = "";
 $i = 0;
 require_once 'config.php';
 //Total In Stocks 
 $account = $_SESSION['username'];
-$qry = "SELECT username, warehouse FROM area_center WHERE username = '$account'";
+$qry = "SELECT username, area_center FROM stockist WHERE username = '$account'";
 $result = mysqli_query($link, $qry) or die(mysqli_error($link));
 if (mysqli_num_rows($result) > 0) {
   while($rows = mysqli_fetch_array($result)){
     $username = $rows['username'];
-    $warehouse_ac = $rows['warehouse'];
+    $warehouse_ac = $rows['area_center'];
     //echo "<script>alert('$warehouse_ac');</script>";
   }
 }
