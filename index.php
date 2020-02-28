@@ -1,20 +1,17 @@
 <?php include "session.php"; ?>
-<!DOCTYPE html>
-<html lang="en">
-<?php include "includes/header.php"; ?>
 <?php require_once 'config.php'; ?>
 
 <?php 
 //Total In Stocks 
-$account = $_SESSION['username'];
-$qry = "SELECT * FROM stockist WHERE username = '$account'";
+$account = $_SESSION['stockist_username'];
+$qry = "SELECT * FROM stockist WHERE stockist_username = '$account'";
 $result = mysqli_query($link, $qry) or die(mysqli_error($link));
 if (mysqli_num_rows($result) > 0) {
   while($rows = mysqli_fetch_array($result)){
-     $username = $rows['username'];
-    $warehouse = $rows['warehouse'];
-  }
-   
+   $username = $rows['stockist_username'];
+   $warehouse = $rows['area_center'];
+ }
+
 }
 ?>
 
@@ -88,10 +85,17 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<?php include "includes/header.php"; ?>
+
+
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
 
     <?php include "includes/navbar.php"; ?>
+    
     <?php include "includes/sidebar-manage.php"; ?>
 
     <div class="content-wrapper">
@@ -111,22 +115,19 @@ if (mysqli_num_rows($result) > 0) {
       <div class="content">
 
 
-              <div class="card-header border-0">
-                
-              </div>
-                <div class="alert alert-warning alert-dismissible">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                  <h5><i class="icon fas fa-exclamation-triangle"></i> Notice</h5>
-                  VIP Area Center System is under BETA Testing. Contact Support if you experience any bugs or error.
-                </div>
-                <!-- Quick Access > L -->
-                <label>Quick Access:</label><br>
-                <a class="btn btn-primary" href="stock-request.php"><i class="nav-icon fas fa-cube"></i> Request Stock</a>
-                <a class="btn btn-primary" href="stock-request-history.php"><i class="nav-icon fas fa-copy"></i> Request History</a>
-                <a class="btn btn-success" href="stock-view.php"><i class="nav-icon fas fa-cubes"></i> View Stocks</a>
-               
-                
+        <div class="card-header border-0">
 
+        </div>
+        <div class="alert alert-warning alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <h5><i class="icon fas fa-exclamation-triangle"></i> Notice</h5>
+          VIP Area Center System is under BETA Testing. Contact Support if you experience any bugs or error.
+        </div>
+        <!-- Quick Access > L -->
+        <label>Quick Access:</label><br>
+        <a class="btn btn-primary" href="stock-request.php"><i class="nav-icon fas fa-cube"></i> Request Stock</a>
+        <a class="btn btn-primary" href="stock-request-history.php"><i class="nav-icon fas fa-copy"></i> Request History</a>
+        <a class="btn btn-success" href="stock-view.php"><i class="nav-icon fas fa-cubes"></i> View Stocks</a>
 
 
         <!-- /.card -->
@@ -135,26 +136,26 @@ if (mysqli_num_rows($result) > 0) {
     </div>
     <!-- /.row -->
     <?php include "includes/footer.php"; ?>
-</div>
   </div>
+  
 
 
 
 
-<!-- ./wrapper -->
+  <!-- ./wrapper -->
 
-<!-- REQUIRED SCRIPTS -->
+  <!-- REQUIRED SCRIPTS -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE -->
-<script src="dist/js/adminlte.js"></script>
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE -->
+  <script src="dist/js/adminlte.js"></script>
 
-<!-- OPTIONAL SCRIPTS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<script src="dist/js/demo.js"></script>
-<script src="dist/js/pages/dashboard3.js"></script>
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="dist/js/pages/dashboard3.js"></script>
 </body>
 </html>
