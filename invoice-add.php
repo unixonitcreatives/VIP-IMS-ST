@@ -22,7 +22,7 @@ if(isset($_POST['fullypaid'])){
   //Step 1: Prepare Variables
 
   $invCustName  = valData($_POST['invCustName']);
-  $invWarehouse  = valData($warehouse_ac);
+  $invWarehouse  = valData($account);
   $invDate      = valData($_POST['invDate']);
   $invRemarks   = valData($_POST['invRemarks']);
   $invMot   = valData($_POST['invMot']);
@@ -484,8 +484,8 @@ function valData($data) {
                         </div>
 
                         <div class="form-group">
-                          <label>Warehouse</label>
-                          <input type="text" class="form-control" placeholder="pcs" name="invWarehouse" id="" value="<?php echo $warehouse_ac;?>" readonly>
+                          <label>Stockist</label>
+                          <input type="text" class="form-control" placeholder="pcs" name="invWarehouse" id="" value="<?php echo $account;?>" readonly>
 
                         </div>
 

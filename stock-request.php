@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) > 0) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //Assigning posted values to variables.
-  $warehouse = test_input($_POST['warehouse']);
+  $warehouse = test_input($_POST['area_center']);
   $product = test_input($_POST['product']);
   $qty = test_input($_POST['qty']);
   $date = test_input($_POST['date']);
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty($alertMessage)){
     $query = "
     INSERT INTO stock_request (product, qty, warehouse, status, remarks, created_by, created_at)
-    VALUES ('$product', '$qty', '$warehouse', 'Pending', '$remarks', '$account', '$date')"; //Prepare insert query
+    VALUES ('$product', '$qty', '$account', 'Pending', '$remarks', '$account', '$date')"; //Prepare insert query
     $result = mysqli_query($link, $query) or die(mysqli_error($link)); //Execute  insert query
     if($result){
       $info = $_SESSION['username']." generated new request";
@@ -115,8 +115,8 @@ function test_input($data) {
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label>Warehouse</label>
-                          <input type="text" class="form-control" placeholder="pcs" name="warehouse" id="" value="<?php echo $warehouse_ac;?>" readonly>
+                          <label>Stockist</label>
+                          <input type="text" class="form-control" placeholder="pcs" name="warehouse" id="" value="<?php echo $account;?>" readonly>
 
                         </div>
 

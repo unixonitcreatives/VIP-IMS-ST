@@ -121,7 +121,7 @@ if (mysqli_num_rows($result) > 0) {
         <div class="alert alert-warning alert-dismissible">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
           <h5><i class="icon fas fa-exclamation-triangle"></i> Notice</h5>
-          VIP Area Center System is under BETA Testing. Contact Support if you experience any bugs or error.
+          VIP Stockist System is under BETA Testing. Contact Support if you experience any bugs or error.
         </div>
         <!-- Quick Access > L -->
         <label>Quick Access:</label><br>
