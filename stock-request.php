@@ -126,7 +126,7 @@ function test_input($data) {
                             <option value="">SELECT PRODUCT</option>
                             <?php
                             $queryWarehouse = "";
-                            $queryWarehouse = "SELECT * FROM product_model";
+                            $queryWarehouse = "SELECT * FROM product_model WHERE type = 'retail'";
                             if($resultWarehouse = mysqli_query($link, $queryWarehouse)){
                               if(mysqli_num_rows($resultWarehouse) > 0){
                                 while($row = mysqli_fetch_array($resultWarehouse)){
