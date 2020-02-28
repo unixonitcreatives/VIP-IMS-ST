@@ -25,7 +25,7 @@
             </a>
           </li>
 
-          <li class="nav-item has-treeview">
+                    <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
@@ -55,12 +55,12 @@
                 </a>
               </li> -->
 
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="invoice-unpaid.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Unpaid Invoice</p>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </li>
 
@@ -69,180 +69,60 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cubes"></i>
               <p>
-                Products
-                <i class="right fas fa-angle-left"></i>
+                Stocks
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="product-add.php" class="nav-link">
+                <a href="stock-request.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add Product Model</p>
+                  <p>Request Stocks</p>
                 </a>
               </li>
+
               <li class="nav-item">
-                <a href="product-manage.php" class="nav-link">
+                <a href="stock-request-history.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Product Model</p>
+                  <p>Request History</p>
                 </a>
               </li>
+
               <li class="nav-item">
-                <a href="stock-add.php" class="nav-link">
+                <a href="stock-view.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add Stock</p>
+                  <p>View Stocks</p>
                 </a>
               </li>
-               <li class="nav-item">
-                <a href="stock-manage.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Stocks</p>
-                </a>
-              </li>
-               
+              
             </ul>
           </li>
-          <li class="nav-item has-treeview">
+
+          <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cube"></i>
+              <i class="nav-icon fas fa-address-card"></i>
               <p>
-                Packages
+                Stockist
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
 
               <li class="nav-item">
-                <a href="package-add.php" class="nav-link">
+                <a href="area-center-manage.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add Packages</p>
+                  <p>View Stockists</p>
                 </a>
               </li>
+
               <li class="nav-item">
-                <a href="package-manage.php" class="nav-link">
+                <a href="stock-request-manage.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Packages</p>
+                  <p>Manage Stock Requests</p>
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-warehouse"></i>
-              <p>
-                Warehouse
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-
-              <li class="nav-item">
-                <a href="warehouse-add.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Warehouse</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="warehouse-manage.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Warehouse</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="stock-transfer.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Transfer Stocks</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="stock-transfer-manage.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Stocks Transfer</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Members
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="members-add.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add Member</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="members-manage.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Active Members</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="members-inactive.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inactive Members</p>
-                </a>
-              </li>
-
-            </ul>
-          </li>
-
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Reports
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <!-- <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Stock Report</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Some Report</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Report</p>
-                </a>
-              </li>
-            </ul> -->
-          </li>
-
-            <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cog"></i>
-              <p>
-                Settings
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-               
-
-              <li class="nav-item">
-                <a href="staff-account-manage.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Account</p>
-                </a>
-              </li>
-
-            </ul>
-          </li>
-
+          </li> -->
 
           <li class="nav-item">
             <a href="logout.php" class="nav-link">

@@ -160,10 +160,10 @@ function test_input($data) {
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="icon" href="logo/VIP.png">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url('dist/bg.png');background-repeat: no-repeat; background-size: cover;">
   <div class="login-box">
     <div class="login-logo">
-      <a href="index.php"><b>VIP</b>IMS</a>
+      <a href="index.php" class="text-white"><b>VIP</b>-IMS STOCKIST</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
@@ -201,7 +201,7 @@ function test_input($data) {
             <!-- /.col -->
           </div>
         </form>
-
+        <br>
         Powered by: <a href="http://www.unixondev.com" class="text-center">Unixon IT Creatives</a>
 
 
