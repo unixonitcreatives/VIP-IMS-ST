@@ -92,7 +92,8 @@
                         require_once 'config.php';
 
                         // Attempt select query execution
-                        $query = "SELECT * FROM outboundtb WHERE ob_warehouse = '$warehouse_ac' ORDER BY ob_tx_id DESC";
+                        $query = "SELECT * FROM outboundtb WHERE ob_warehouse = '$account' ORDER BY ob_tx_id DESC";
+
                         if($result = mysqli_query($link, $query)){
                           if(mysqli_num_rows($result) > 0){
                             $ctr = 0;

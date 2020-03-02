@@ -1,9 +1,9 @@
 <?php
-include "session.php";
-  $Admin_auth = 1;
-  $Stock_auth = 1;
-  $Area_Center_auth = 0;
- include('includes/user_auth.php');
+ include "session.php";
+ //  $Admin_auth = 1;
+ //  $Stock_auth = 1;
+ //  $Area_Center_auth = 0;
+ // include('includes/user_auth.php');
 ?>
 <?php include "config.php"; ?>
 
@@ -51,7 +51,7 @@ if($Getresult = mysqli_query($link, $Getquery)){
   echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 
-if($warehouse_ac != $ob_warehouse){
+if($account != $ob_warehouse){
   echo ("<script LANGUAGE='JavaScript'>
     window.alert('You have no privilege to access this invoice. Returning to Invoice Manage.');
     window.location.href='invoice-manage.php';
