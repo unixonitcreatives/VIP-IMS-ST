@@ -1,6 +1,7 @@
 <?php include "session.php"; 
 
 require_once 'config.php';
+
 $account = $_SESSION['username'];
 $qry = "SELECT username, warehouse FROM area_center WHERE username = '$account'";
 $result = mysqli_query($link, $qry) or die(mysqli_error($link));
