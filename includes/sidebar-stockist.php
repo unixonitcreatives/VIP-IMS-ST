@@ -98,31 +98,23 @@
             </ul>
           </li>
 
-          <!-- <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-address-card"></i>
               <p>
-                Stockist
+                Settings
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-
               <li class="nav-item">
-                <a href="area-center-manage.php" class="nav-link">
+                <a href="stockist-profile.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>View Stockists</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="stock-request-manage.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Manage Stock Requests</p>
+                  <p>Profile</p>
                 </a>
               </li>
             </ul>
-          </li> -->
+          </li>
 
           <li class="nav-item">
             <a href="logout.php" class="nav-link">
